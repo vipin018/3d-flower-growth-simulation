@@ -8,7 +8,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 // GUI Controls API with optimized defaults
 const api = {
     maxCount: 1500,
-    surfaceOpacity: 0.8,
+    surfaceOpacity: 1,
     surfaceColor: 0xffff00,
     alignToSurface: true,
     randomRotation: false, // Disabled by default to prevent tilting
@@ -818,42 +818,6 @@ function startDemo() {
 }
 
 setTimeout(startDemo, 1000);
-
-// Console instructions
-console.log(`
-Fast Growing Flowers - Controls
---------------------------------------------
-
-Mouse Controls:
-  - Hover over surface: Spawn flowers continuously
-  - Click on surface: Spawn flower burst (5 flowers)
-
-Keyboard Shortcuts:
-  - 1-4: Growth presets (Slow/Normal/Fast/Instant)
-  - C: Clear all flowers
-  - R: Toggle surface rotation
-  - I: Toggle instant growth mode
-  - Space: Toggle flower animations
-
-GUI Features:
-  - Quick Presets: One-click growth modes
-  - Speed Controls: Fine-tune growth and spawn rates
-  - Flower Controls: Adjust Growth Scale, Scale Variation, and Base Model Scale
-  - Performance: Optimized for smooth rendering
-
-Optimized Features:
-  - Flowers aligned to surface with base touching geometry
-  - Smoother growth animations
-  - Improved performance with LOD and update limits
-
-Tips for Best Experience:
-  - Use the Flowers folder to adjust Growth Scale and Base Model Scale
-  - Enable Random Rotation for slight yaw variation
-  - Enable LOD in Performance settings
-  - Adjust Max Flowers if performance lags
-
-Ready to grow some flowers
-`);
 
 if (typeof window !== 'undefined') {
     window.flowerAPI = {
